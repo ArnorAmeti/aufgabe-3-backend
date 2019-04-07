@@ -23,7 +23,7 @@ const storage = multer.diskStorage({
     }
 });
 
-
+//erwartet mehrere files (client schickt trotzdem alle einzeln)
 const upload = multer({storage: storage}).array('file');
 
 app.post('/api/videos',function(req,res){
